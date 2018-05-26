@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="us-en">
+<head>
+<meta charset="utf-8">
+<title>21</title>
+<script>
+/*input: no user input
+  process: get numbers from 1 to 10 randomly and calculate sum. 
+          use if statement to detect two situations. 
+  output: if the sum is greater than 21, show "bust",
+          otherwise, show the sum.
+*/
+function calculate(){
+     var score=twentyOne(hand);
+	 document.getElementById("output5").innerHTML=score; 
+}
+function twentyOne(hand){
+	var hand=[1,2,3,4,5,6,7,8,9,10];
+    var cards=Math.floor(Math.random()*hand.length+1);
+	var score=0;
+	if(score<22){
+		return score++
+	}
+	else {
+	    return "bust";
+	}
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="calculate()">draw a card</button>
+<div id="output5"></div>
+</body>
+</html>
