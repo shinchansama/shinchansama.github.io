@@ -1,0 +1,221 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 100px;
+  height: 100%; }
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #002040;
+  color: #f2f2f2;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+header {
+  background-color: none;
+  color: #f2f2f2;
+  position: relative;
+  margin-bottom: -55px;
+  z-index: 2; }
+  header .col-md-12 {
+    padding: 0; }
+    header .col-md-12 img#logo {
+      height: 33px;
+      margin: 0; }
+    header .col-md-12 .navbar-toggler {
+      background-color: #f2f2f2; }
+      header .col-md-12 .navbar-toggler .navbar-toggler-icon {
+        color: black; }
+    header .col-md-12 .nav-link.menu.active {
+      border-bottom: 3px solid #020372; }
+    header .col-md-12 .nav-link.menu:hover {
+      border-bottom: 3px solid #f2f2f2; }
+
+#loader-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  color: #020372;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100; }
+
+#loader {
+  display: block;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #020372;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite; }
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+a:not(.link) {
+  color: inherit; }
+  a:not(.link):hover {
+    text-decoration: none;
+    color: inherit; }
+
+.no-bullet {
+  list-style-type: none; }
+  .no-bullet li > p {
+    margin: 0; }
+
+.row {
+  margin: 0; }
+
+.page {
+  z-index: 1; }
+  .page hr.sub-heading-underline {
+    border: 2px solid #020372;
+    width: 70px;
+    margin: 0 0 30px; }
+
+.bg-none {
+  background-color: none;
+  padding: 40px; }
+  .bg-none .sub-heading {
+    font-size: 30px;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 3px #020372;
+    font-weight: bold; }
+
+.bg-gray {
+  background-color: #f2f2f2;
+  padding: 40px; }
+  .bg-gray .sub-heading {
+    font-size: 30px;
+    color: #020372;
+    text-shadow: 2px 2px 3px #f2f2f2;
+    font-weight: bold; }
+
+#page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #page1 .about-container {
+    padding: 20%; }
+    #page1 .about-container h1 {
+      font-size: 60px;
+      color: #f2f2f2;
+      text-shadow: 2px 2px 3px #020372;
+      text-align: center;
+      padding: 0 0 10%; }
+    #page1 .about-container h2 {
+      font-style: italic;
+      color: #f2f2f2;
+      text-shadow: 2px 2px 3px #020372; }
+
+#page2 .col-md-6 {
+  padding: 0; }
+  #page2 .col-md-6 .left-content {
+    padding-right: 20px; }
+    #page2 .col-md-6 .left-content h2,
+    #page2 .col-md-6 .left-content h3 {
+      max-width: 300px; }
+    #page2 .col-md-6 .left-content h3 {
+      margin: 0 0 3%; }
+    #page2 .col-md-6 .left-content .detail img {
+      max-width: 300px;
+      margin: 30px 0 30px 30px;
+      float: right; }
+  #page2 .col-md-6 .right-content {
+    padding-left: 20px; }
+
+.fixed .background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url("../../images/tokyo-night.jpg") no-repeat;
+  z-index: -1; }
+.fixed .mentor {
+  position: fixed;
+  top: 59px;
+  right: 0;
+  width: 250px;
+  background-color: #020372;
+  z-index: 2;
+  display: flex;
+  flex-direction: row; }
+  .fixed .mentor .toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    background-color: #f2f2f2;
+    cursor: pointer; }
+    .fixed .mentor .toggle p {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 35px 0;
+      text-align: center; }
+  .fixed .mentor .container {
+    height: 100%;
+    margin: 5%; }
+    .fixed .mentor .container a {
+      background-color: #f2f2f2;
+      color: #020372;
+      font-weight: 600;
+      border: 2px solid #f2f2f2;
+      padding: 1% 5%;
+      margin: 2% 10%;
+      width: 180px; }
+      .fixed .mentor .container a p {
+        margin: 0; }
+      .fixed .mentor .container a:hover {
+        background-color: #020372;
+        color: #f2f2f2; }
+.fixed .subscribe-button {
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+  z-index: 2; }
+  .fixed .subscribe-button a {
+    color: #f2f2f2;
+    background-color: #020372;
+    border: 3px solid #020372;
+    border-radius: 25px;
+    width: 120px; }
+    .fixed .subscribe-button a p {
+      margin: 0; }
+    .fixed .subscribe-button a:hover {
+      color: #020372;
+      background-color: #f2f2f2;
+      font-weight: 700; }
+
+/*# sourceMappingURL=index.css.map */
