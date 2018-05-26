@@ -1,0 +1,330 @@
+//cd git/JSA/styles
+//sass --watch scss/index.scss:css/index.css
+//global
+$themblue: #020372;
+$themered: #ed2939;
+$grayaswhite: #f2f2f2;
+$byu: #002040;
+$byui: #0076B6;
+$byuh: #90132b;
+$footer-height: 100px;
+$header-height: 55px;
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: $footer-height;
+    height: 100%;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: $footer-height;
+    background-color: $byu;
+    color: $grayaswhite;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: none;
+    color: $grayaswhite;
+    position: relative;
+    margin-bottom: -$header-height;
+    z-index: 2;
+
+    .col-md-12 {
+        padding: 0;
+
+        img#logo {
+            height: 33px;
+            margin: 0;
+        }
+
+        .navbar-toggler {
+            background-color: $grayaswhite;
+
+            .navbar-toggler-icon {
+                color: black;
+            }
+        }
+
+        .nav-link.menu {
+            &.active {
+                border-bottom: 3px solid $themblue;
+            }
+
+            &:hover {
+                border-bottom: 3px solid $grayaswhite;
+            }
+        }
+    }
+}
+//loader-container
+
+#loader-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $grayaswhite;
+    color: $themblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#loader {
+    display: block;
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid $themblue;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+//global
+
+a:not(.link) {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.no-bullet {
+    list-style-type: none;
+
+    li > p {
+        margin: 0;
+    }
+}
+
+.row {
+    margin: 0;
+}
+
+.page {
+    z-index: 1;
+
+    hr.sub-heading-underline {
+        border: 2px solid $themblue;
+        width: 70px;
+        margin: 0 0 30px;
+    }
+}
+
+.bg-none {
+    background-color: none;
+    padding: 40px;
+
+    .sub-heading {
+        font-size: 30px;
+        color: $grayaswhite;
+        text-shadow: 2px 2px 3px $themblue;
+        font-weight: bold;
+    }
+}
+
+.bg-gray {
+    background-color: $grayaswhite;
+    padding: 40px;
+
+    .sub-heading {
+        font-size: 30px;
+        color: $themblue;
+        text-shadow: 2px 2px 3px $grayaswhite;
+        font-weight: bold;
+    }
+}
+//about
+
+#page1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-container {
+        padding: 20%;
+
+        h1 {
+            font-size: 60px;
+            color: $grayaswhite;
+            text-shadow: 2px 2px 3px $themblue;
+            text-align: center;
+            padding: 0 0 10%;
+        }
+
+        h2 {
+            font-style: italic;
+            color: $grayaswhite;
+            text-shadow: 2px 2px 3px $themblue;
+        }
+    }
+}
+
+#page2 {
+    .col-md-6 {
+        padding: 0;
+
+        .left-content {
+            padding-right: 20px;
+
+            h2,
+            h3 {
+                max-width: 300px;
+            }
+
+            h3 {
+                margin: 0 0 3%;
+            }
+
+            .detail {
+                img {
+                    max-width: 300px;
+                    margin: 30px 0 30px 30px;
+                    float: right;
+                }
+            }
+        }
+
+        .right-content {
+            padding-left: 20px;
+        }
+    }
+}
+//fixed
+
+.fixed {
+    .background {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background: url("../../images/tokyo-night.jpg") no-repeat; //career
+        // background: url("../../images/fuji-morning.jpg") no-repeat center center fixed;//homepage
+        // background: url("../../images/firework-night.jpg") no-repeat center center fixed; //about
+        // background: url("../../images/matsuri-night.jpg") no-repeat center center fixed;//event
+        // background: url("../../images/byu-noon.jpg") no-repeat center center fixed;//alumni
+        z-index: -1;
+    }
+
+    .mentor {
+        position: fixed;
+        top: 59px;
+        right: 0;
+        width: 250px;
+        background-color: $themblue;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+
+        .toggle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 25px;
+            background-color: $grayaswhite;
+            cursor: pointer;
+
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                margin: 35px 0;
+                text-align: center;
+            }
+        }
+
+        .container {
+            height: 100%;
+            margin: 5%;
+
+            a {
+                background-color: $grayaswhite;
+                color: $themblue;
+                font-weight: 600;
+                border: 2px solid $grayaswhite;
+                padding: 1% 5%;
+                margin: 2% 10%;
+                width: 180px;
+
+                p {
+                    margin: 0;
+                }
+
+                &:hover {
+                    background-color: $themblue;
+                    color: $grayaswhite;
+                }
+            }
+        }
+    }
+
+    .subscribe-button {
+        position: fixed;
+        bottom: 1%;
+        right: 2%;
+        z-index: 2;
+
+        a {
+            color: $grayaswhite;
+            background-color: $themblue;
+            border: 3px solid $themblue;
+            border-radius: 25px;
+            width: 120px;
+
+            p {
+                margin: 0;
+            }
+
+            &:hover {
+                color: $themblue;
+                background-color: $grayaswhite;
+                font-weight: 700;
+            }
+        }
+    }
+}
