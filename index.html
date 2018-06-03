@@ -5,16 +5,7 @@
 	<link rel="icon" href="images/saka.png"/>
 
 
-	<script src="jquery.js"></script> 
-    <script type="text/javascript">
-		function fahrToCels(){
-		var text = document.getElementById('fahrenInputBox').value;
-		var f = parseFloat(text);
-		var c = 5 / 9 * (f - 32);
-		document.getElementById('celsiusDiv').innerHTML = c.toFixed(2);
-	}
-	</script>
-	
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -49,8 +40,8 @@
     </header>
 	<div><div/>
 	<h1> Welcome to the Sakamoto Share House</h1>
-	<p style="text-align:center;"> Come for the Shinri, stay for the Sakamoto! <br/> <img src="images/shinri_knife.jpg"/> </p>
-	<p style="text-align:center;"> Enter a temperature in Fahrenheit: <br/> <input type="text" id="fahrenInputBox">
+	<p class="des"> Come for the Shinri, stay for the Sakamoto! <br/> <img src="images/shinri_knife.jpg"/> </p>
+	<p class="des"> Enter a temperature in Fahrenheit: <br/> <input type="text" id="fahrenInputBox">
 		<button type="button" onclick="fahrToCels()">Convert</button>
 		<div id="celsiusDiv"></div>
 	</p>
