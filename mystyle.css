@@ -1,5 +1,11 @@
 p.des
-{
-text-align: center;
-color: #F45E1D
-}
+  {
+  text-align: center;
+  color: #F45E1D;
+  }
+footer
+  {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  }
