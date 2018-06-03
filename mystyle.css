@@ -14,3 +14,7 @@ header
     face: verdana 
     color: green;
   }
+p
+  {
+    color: red;
+  }
