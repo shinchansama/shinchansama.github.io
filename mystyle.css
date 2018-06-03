@@ -3,3 +3,8 @@ p.des
   text-align: center;
   color: #F45E1D;
   }
+p {text-align: center;color: black;}
+
+body {background-color: lightblue;}
+
+h1 {text-align: center;color: black; background-color: white;}
